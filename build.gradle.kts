@@ -11,6 +11,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 plugins {
     id("java")
     application
+    id("io.freefair.lombok") version "8.4"
 }
 
 application {
@@ -34,6 +35,9 @@ dependencies {
     implementation("gg.jte:jte:3.1.9")
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+
+    implementation("gg.jte:jte:3.1.9")
+    implementation("io.javalin:javalin-rendering:6.1.3")
 }
 
 tasks.test {
