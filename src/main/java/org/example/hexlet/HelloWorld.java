@@ -12,7 +12,7 @@ import static io.javalin.rendering.template.TemplateUtil.model;
 
 public class HelloWorld {
 
-    static List<Course> coursesAll = List.of(new Course("JTE1", "One"), new Course("JTE2", "Two"), new Course("JTE3", "Three"));
+    static List<Course> coursesAll = List.of(new Course(1, "JTE1", "One"), new Course(2,"JTE2", "Two"), new Course(3, "JTE3", "Three"));
 
 
     public static void main(String[] args) {
@@ -33,8 +33,6 @@ public class HelloWorld {
             var courses = coursesAll;
             var header = "Programming Courses";
             var page = new CoursesPage(courses, header);
-            var sss = page.getHeader();
-            System.out.println(sss);
             ctx.render("courses/index.jte", model("page", page));
         });
 

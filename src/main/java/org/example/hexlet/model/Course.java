@@ -14,7 +14,17 @@ public final class Course {
     private String name;
     private String description;
 
+    public String getIdStr () {
+        return String.valueOf(id);
+    }
+
     public Course(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public Course(int id, String name, String description) {
+        this.id = Long.valueOf(id);
         this.name = name;
         this.description = description;
     }
